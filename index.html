@@ -3,89 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Associação XYZ</title>
-  <link rel="stylesheet" href="./style.css">
-  <script src="./script.js"></script>
+  <title>Associação - Início</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <!-- Cabeçalho -->
   <header>
-    <div class="logo">Associação Cultural, Desportiva e Educacional ZN</div>
-    <nav id="menu">
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#eventos">Eventos</a></li>
-        <li><a href="#contato">Contato</a></li>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="historia.html">História</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="institucional.html">Institucional</a></li>
+        <li><a href="associados.html">Associados</a></li>
+        <li><a href="mensalidades.html">Mensalidades</a></li>
+        <li><a href="resultados.html">Resultados</a></li>
+        <li><a href="seja-socio.html">Seja Sócio</a></li>
+        <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Juntos pela Comunidade</h1>
-      <p>Conectando pessoas, transformando realidades.</p>
-      <a href="#sobre" class="btn">Conheça a Associação</a>
-    </div>
+  <!-- Banner principal -->
+  <section class="banner">
+    <h1>Bem-vindo à Associação</h1>
+    <p>Unindo pessoas, transformando comunidades</p>
+    <a href="seja-socio.html" class="btn">Seja Sócio</a>
   </section>
 
-  <!-- Sobre -->
-  <section id="sobre" class="container">
-    <h2>Sobre Nós</h2>
-    <p>
-      A Associação XYZ é uma organização sem fins lucrativos que promove 
-      educação, cultura e meio ambiente. Nosso objetivo é unir pessoas 
-      para gerar impacto positivo na comunidade.
-    </p>
-  </section>
-
-  <!-- Projetos -->
-  <section id="projetos" class="container">
-    <h2>Nossos Projetos</h2>
-    <div class="cards">
+  <!-- Destaques -->
+  <main>
+    <section class="cards">
       <div class="card">
-        <h3>📚 Educação</h3>
-        <p>Aulas de reforço escolar para crianças e adolescentes.</p>
+        <h2>Nossa História</h2>
+        <p>Conheça a trajetória da associação e como impactamos nossa comunidade desde a fundação.</p>
+        <a href="historia.html" class="btn">Saiba mais</a>
       </div>
       <div class="card">
-        <h3>🌱 Meio Ambiente</h3>
-        <p>Campanhas de conscientização e mutirões de limpeza.</p>
+        <h2>Projetos</h2>
+        <p>Descubra os projetos sociais, culturais e educativos que realizamos ao longo do ano.</p>
+        <a href="projetos.html" class="btn">Ver projetos</a>
       </div>
       <div class="card">
-        <h3>🎭 Cultura</h3>
-        <p>Eventos culturais e oficinas artísticas para todos.</p>
+        <h2>Resultados</h2>
+        <p>Acompanhe nossas conquistas e reconhecimentos em âmbito regional e nacional.</p>
+        <a href="resultados.html" class="btn">Ver resultados</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Eventos -->
-  <section id="eventos" class="container">
-    <h2>Próximos Eventos</h2>
-    <ul class="event-list">
-      <li><span>20/09</span> Feira de Ciências Comunitária</li>
-      <li><span>05/10</span> Mutirão de Limpeza do Parque</li>
-      <li><span>15/11</span> Festival Cultural</li>
-    </ul>
-  </section>
-
-  <!-- Contato -->
-  <section id="contato" class="container">
-    <h2>Fale Conosco</h2>
-    <form>
-      <input type="text" placeholder="Seu nome" required>
-      <input type="email" placeholder="Seu e-mail" required>
-      <textarea placeholder="Digite sua mensagem..." required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+    <section class="cta">
+      <h2>Faça parte da nossa história</h2>
+      <p style="margin-bottom: 35px;">Associe-se e ajude a fortalecer nossa comunidade.</p>
+      <a href="seja-socio.html" class="btn">Seja Sócio</a>
+    </section>
+  </main>
 
   <!-- Rodapé -->
   <footer>
-    <p>© 2025 Associação XYZ - Todos os direitos reservados</p>
+    <p>&copy; 2025 Associação - Todos os direitos reservados</p>
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
