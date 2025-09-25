@@ -1,0 +1,93 @@
+.resultados-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.resultados-intro h1 {
+  font-size: 2.5rem;
+  color: var(--verde-padrao);
+  margin-bottom: 15px;
+}
+
+.resultados-intro p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #444;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resultados-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  color: var(--verde-padrao);
+  margin-bottom: 15px;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.resultados-destaques {
+  background-color: #f1f1f1;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.resultados-destaques h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--verde-padrao);
+}
+
+.highlight {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.highlight p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: var(--verde-padrao);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}

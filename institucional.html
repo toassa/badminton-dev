@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Institucional - Associação</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/institucional.css">
+  <link rel="stylesheet" href="./css/resultados.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode"/>
 </head>
 <body>
   <header>
@@ -14,29 +16,59 @@
         <li><a href="historia.html">História</a></li>
         <li><a href="projetos.html">Projetos</a></li>
         <li><a href="institucional.html" class="active">Institucional</a></li>
+        <li><a href="resultados.html">Resultados</a></li>
         <li><a href="contato.html">Contato</a></li>
+        <li><button id="toggle-dark" class="btn">🌙 Dark Mode</button></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Institucional</h1>
+    <section class="institucional-intro">
+      <h1>Institucional</h1>
+      <p>Conheça nossos documentos oficiais e acompanhe informações importantes sobre a associação.</p>
+    </section>
+
     <section class="cards">
       <div class="card">
+        <div class="icon">📄</div>
         <h2>Estatuto</h2>
-        <p><a href="docs/estatuto.pdf" target="_blank">Baixar Estatuto da Associação</a></p>
+        <p>Baixe e consulte o Estatuto completo da associação.</p>
+        <a href="docs/estatuto.pdf" target="_blank" class="btn">Baixar Estatuto</a>
       </div>
       <div class="card">
+        <div class="icon">📑</div>
         <h2>Documentos</h2>
-        <p><a href="docs/documentos.pdf" target="_blank">Outros Documentos Relevantes</a></p>
+        <p>Outros documentos importantes da associação.</p>
+        <a href="docs/documentos.pdf" target="_blank" class="btn">Baixar Documentos</a>
       </div>
       <div class="card">
-        <h2>Acompanhamento de Mensalidades</h2>
-        <p><a href="mensalidades.html">Clique aqui para acessar</a></p>
+        <div class="icon">💰</div>
+        <h2>Mensalidades</h2>
+        <p>Acesse o acompanhamento das mensalidades dos associados.</p>
+        <a href="./institucional/mensalidades.html" class="btn">Ver Mensalidades</a>
+      </div>
+      <div class="card">
+        <div class="icon">👥</div>
+        <h2>Associados</h2>
+        <p>Confira a lista de associados e benefícios disponíveis.</p>
+        <a href="./institucional/associados.html" class="btn">Ver Associados</a>
+      </div>
+    </section>
+
+    <section class="institucional-destaques">
+      <h2>Informações Relevantes</h2>
+      <div class="highlight">
+        <h3>Transparência</h3>
+        <p>A associação mantém registros claros de todas as atividades, garantindo acesso fácil a associados e público interessado.</p>
+      </div>
+      <div class="highlight">
+        <h3>Compromisso Social</h3>
+        <p>Nossos documentos refletem o compromisso da associação com responsabilidade social e ética em todas as ações.</p>
       </div>
     </section>
   </main>
-
+  <script src="./scripts/dark-mode.js"></script>
   <footer>
     <p>&copy; 2025 Associação - Todos os direitos reservados</p>
   </footer>

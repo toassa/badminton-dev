@@ -1,0 +1,103 @@
+.institucional-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.institucional-intro h1 {
+  font-size: 2.5rem;
+  color: var(--verde-padrao);
+  margin-bottom: 15px;
+}
+
+.institucional-intro p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #444;
+  line-height: 1.6;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  color: var(--verde-padrao);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.card .btn {
+  display: inline-block;
+  background: var(--verde-padrao);
+  color: var(--branco);
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.card .btn:hover {
+  background: var(--preto);
+  transform: scale(1.05);
+}
+
+.institucional-destaques {
+  background: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.institucional-destaques h2 {
+  font-size: 2rem;
+  color: var(--verde-padrao);
+  margin-bottom: 25px;
+}
+
+.highlight {
+  background: white;
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.highlight:hover {
+  transform: scale(1.02);
+}
+
+.highlight h3 {
+  color: var(--verde-padrao);
+  margin-bottom: 10px;
+}

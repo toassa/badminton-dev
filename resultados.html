@@ -5,35 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resultados Competitivos - Associação</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/resultados.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode"/>
 </head>
 <body>
   <header>
     <nav>
       <ul class="navbar">
         <li><a href="index.html">Início</a></li>
+        <li><a href="historia.html">História</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="institucional.html">Institucional</a></li>
         <li><a href="resultados.html" class="active">Resultados</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><button id="toggle-dark" class="btn"><span class="material-symbols-outlined">dark_mode</span></button></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Resultados Competitivos</h1>
-    <section class="cards">
+    <section class="resultados-intro">
+      <h1>Resultados Competitivos</h1>
+      <p>
+        A A.C.D.E ZN tem se destacado ao longo dos anos em várias competições e eventos, conquistando prêmios e reconhecimento pelo seu esforço e dedicação. Veja os resultados das nossas principais conquistas!
+      </p>
+    </section>
+
+    <section class="resultados-cards">
       <div class="card">
         <h2>2024</h2>
-        <p>🏆 1º lugar no campeonato regional de projetos sociais.</p>
+        <div class="icon">🏆</div>
+        <p>1º lugar no campeonato regional de projetos sociais.</p>
       </div>
       <div class="card">
         <h2>2023</h2>
-        <p>🥈 2º lugar em premiação cultural estadual.</p>
+        <div class="icon">🥈</div>
+        <p>2º lugar em premiação cultural estadual.</p>
       </div>
       <div class="card">
         <h2>2022</h2>
-        <p>🏅 Reconhecimento nacional por boas práticas em gestão comunitária.</p>
+        <div class="icon">🏅</div>
+        <p>Reconhecimento nacional por boas práticas em gestão comunitária.</p>
+      </div>
+    </section>
+
+    <section class="resultados-destaques">
+      <h2>Conquistas de Destaque</h2>
+      <div class="highlight">
+        <p><strong>Melhor Projeto Social</strong> – Reconhecimento pelo impacto social gerado pela implementação de nosso programa de esportes.</p>
+      </div>
+      <div class="highlight">
+        <p><strong>Prêmio de Cultura Local</strong> – Premiação por nossa contribuição à valorização da arte e cultura na comunidade.</p>
       </div>
     </section>
   </main>
-
+  <script src="./scripts/dark-mode.js"></script>
   <footer>
     <p>&copy; 2025 Associação - Todos os direitos reservados</p>
   </footer>

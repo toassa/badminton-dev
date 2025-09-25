@@ -5,31 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato - Associação</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/contato.css">
+  <link rel="stylesheet" href="./css/resultados.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode"/>
 </head>
 <body>
   <header>
     <nav>
       <ul class="navbar">
         <li><a href="index.html">Início</a></li>
+        <li><a href="historia.html">História</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="institucional.html">Institucional</a></li>
+        <li><a href="resultados.html">Resultados</a></li>
         <li><a href="contato.html" class="active">Contato</a></li>
+        <li><button id="toggle-dark" class="btn">🌙 Dark Mode</button></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Fale Conosco</h1>
-    <form class="formulario">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" required>
+    <section class="contato-intro">
+      <h1>Redes Sociais</h1>
+      <p>Conecte-se com a Associação e acompanhe nossas novidades pelas redes sociais:</p>
+    </section>
 
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" required>
-
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" rows="5" required></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
+    <section class="cards">
+      <div class="card">
+        <div class="icon">📘</div>
+        <h2>Facebook</h2>
+        <p><a href="https://www.facebook.com/suaassociacao" target="_blank">Visite nosso Facebook</a></p>
+      </div>
+      <div class="card">
+        <div class="icon">📸</div>
+        <h2>Instagram</h2>
+        <p><a href="https://www.instagram.com/suaassociacao" target="_blank">Nos acompanhe no Instagram</a></p>
+      </div>
+      <div class="card">
+        <div class="icon">🐦</div>
+        <h2>Twitter</h2>
+        <p><a href="https://twitter.com/suaassociacao" target="_blank">Siga-nos no Twitter</a></p>
+      </div>
+      <div class="card">
+        <div class="icon">💼</div>
+        <h2>LinkedIn</h2>
+        <p><a href="https://www.linkedin.com/company/suaassociacao" target="_blank">Confira nosso LinkedIn</a></p>
+      </div>
+    </section>
   </main>
 
   <footer>
