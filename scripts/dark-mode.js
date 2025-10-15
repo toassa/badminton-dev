@@ -1,15 +1,24 @@
 const toggleBtn = document.getElementById("toggle-dark");
+const iconTheme = document.getElementById("icon-theme");
 
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-
-  if (document.body.classList.contains("dark-mode")) {
-    localStorage.setItem("theme", "dark");
+// Função para aplicar tema
+function setTheme(theme) {
+  if (theme === "dark") {
+    document.body.classList.add("dark-mode");
+    iconTheme.textContent = "light_mode";
   } else {
-    localStorage.setItem("theme", "light");
+    document.body.classList.remove("dark-mode");
+    iconTheme.textContent = "dark_mode";
   }
-});
-
-if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark-mode");
+  localStorage.setItem("theme", theme);
 }
+
+// Carrega tema salvo
+const savedTheme = localStorage.getItem("theme") || "light";
+setTheme(savedTheme);
+
+// Alterna tema ao clicar
+toggleBtn.addEventListener("click", () => {
+  const newTheme = document.body.classList.contains("dark-mode") ? "light" : "dark";
+  setTheme(newTheme);
+});

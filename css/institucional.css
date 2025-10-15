@@ -11,26 +11,26 @@
 
 .institucional-intro p {
   font-size: 1.1rem;
-  max-width: 800px;
-  margin: 0 auto;
-  color: #444;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  color: var(--texto);
   line-height: 1.6;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
   margin-bottom: 50px;
 }
 
 .card {
-  background-color: white;
+  background-color: var(--branco);
   padding: 25px;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
 
 .card:hover {
@@ -51,7 +51,7 @@
 
 .card p {
   margin-bottom: 15px;
-  color: #555;
+  color: var(--texto);
 }
 
 .card .btn {
@@ -71,7 +71,7 @@
 }
 
 .institucional-destaques {
-  background: #f9f9f9;
+  background: var(--fundo);
   padding: 40px 20px;
   border-radius: 8px;
   text-align: center;
@@ -84,13 +84,13 @@
 }
 
 .highlight {
-  background: white;
+  background: var(--branco);
   margin: 15px auto;
   padding: 20px;
   border-radius: 8px;
   max-width: 700px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
 
 .highlight:hover {
@@ -100,4 +100,19 @@
 .highlight h3 {
   color: var(--verde-padrao);
   margin-bottom: 10px;
+}
+
+.highlight p {
+  color: var(--texto);
+}
+
+body.dark-mode .highlight{
+  background: #1e1e1e;
+  color: var(--texto);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .highlight p{
+  color: var(--texto);
 }
