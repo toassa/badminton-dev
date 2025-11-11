@@ -1,3 +1,7 @@
+/* ===================================== */
+/* INTRODUÇÃO INSTITUCIONAL              */
+/* ===================================== */
+
 .institucional-intro {
   text-align: center;
   margin-bottom: 40px;
@@ -17,9 +21,13 @@
   line-height: 1.6;
 }
 
+/* ===================================== */
+/* CARDS PRINCIPAIS (2 COLUNAS)          */
+/* ===================================== */
+
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
   gap: 25px;
   margin-bottom: 50px;
 }
@@ -70,6 +78,10 @@
   transform: scale(1.05);
 }
 
+/* ===================================== */
+/* DESTAQUES/HIGHLIGHTS INSTITUCIONAIS   */
+/* ===================================== */
+
 .institucional-destaques {
   background: var(--fundo);
   padding: 40px 20px;
@@ -106,13 +118,27 @@
   color: var(--texto);
 }
 
-body.dark-mode .highlight{
-  background: #1e1e1e;
+/* ===================================== */
+/* ESTILOS ESPECÍFICOS DO DARK MODE      */
+/* ===================================== */
+
+body.dark-mode .card {
+  background-color: var(--cinza-padrao); 
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .highlight {
+  background: var(--cinza-padrao); 
   color: var(--texto);
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-body.dark-mode .highlight p{
+body.dark-mode .highlight p {
   color: var(--texto);
+}
+
+body.dark-mode .institucional-destaques {
+  background: var(--fundo); 
 }

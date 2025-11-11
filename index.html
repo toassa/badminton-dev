@@ -6,24 +6,57 @@
     <title>Associação - Início</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/resultados.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
 <body>
     <header>
-        <nav>
-            <ul class="navbar">
-                <li><a href="index.html" class="active" aria-current="page">Início</a></li>
-                <li><a href="historia.html">História</a></li>
-                <li><a href="institucional.html">Institucional</a></li>
-                <li><a href="resultados.html">Resultados</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li>
-                    <button id="toggle-dark" class="btn icon-btn" aria-label="Alternar para tema escuro ou claro">
-                        <span id="icon-theme" class="material-symbols-outlined">dark_mode</span>
-                    </button>
-                </li>
-            </ul>
-        </nav>
+      <nav>
+          <ul class="navbar">
+              <li><a href="index.html">Início</a></li>
+              <li><a href="historia.html">História</a></li>
+              <li class="has-submenu">
+                  <button 
+                      aria-current="page" 
+                      aria-expanded="false" 
+                      aria-controls="submenu-institucional"
+                      aria-haspopup="true"
+                  >
+                      Institucional 
+                  </button>
+                  
+                  <ul id="submenu-institucional" class="submenu">
+                      <li><a href="institucional.html">Visão Geral</a></li>
+                      <li><a href="institucional/associados.html">Associados</a></li>
+                      <li><a href="institucional/mensalidades.html">Mensalidades</a></li>
+                  </ul>
+              </li>
+              <li><a href="resultados.html">Resultados</a></li>
+              <li><a href="contato.html">Contato</a></li>
+              <li class="has-submenu">
+                  <button 
+                      id="toggle-font-size" 
+                      class="btn icon-btn" 
+                      aria-label="Alterar Tamanho da Fonte"
+                      aria-haspopup="true" 
+                      aria-expanded="false"
+                      aria-controls="submenu-font"
+                  >
+                      <span class="material-symbols-outlined">format_size</span>
+                  </button>
+                  
+                  <ul id="submenu-font" class="submenu submenu-font-size">
+                      <li><a href="#" data-font-size="small">Pequeno</a></li>
+                      <li><a href="#" data-font-size="medium" class="font-active">Médio (Padrão)</a></li>
+                      <li><a href="#" data-font-size="large">Grande</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <button id="toggle-dark" class="btn icon-btn" aria-label="Alternar para tema escuro ou claro">
+                      <span id="icon-theme" class="material-symbols-outlined">dark_mode</span>
+                  </button>
+              </li>
+          </ul>
+      </nav>
     </header>
 
     <main>
@@ -67,5 +100,6 @@
     </footer>
 
     <script src="./scripts/dark-mode.js"></script>
+    <script src="./scripts/fonte.js"></script> 
 </body>
 </html>

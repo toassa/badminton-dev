@@ -1,3 +1,7 @@
+/* ===================================== */
+/* HISTÓRIA: INTRODUÇÃO                  */
+/* ===================================== */
+
 .historia-intro {
   margin-bottom: 40px;
   text-align: center;
@@ -12,15 +16,19 @@
 .historia-intro p {
   font-size: 1.1rem;
   margin-bottom: 20px;
-  color: #444;
+  color: var(--texto); 
   line-height: 1.6;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* ===================================== */
+/* TIMELINE                              */
+/* ===================================== */
+
 .timeline {
-  background-color: #f9f9f9;
+  background-color: var(--fundo-secundario, #f9f9f9); 
   padding: 40px 20px;
   text-align: center;
   border-radius: 8px;
@@ -71,7 +79,7 @@
 
 .year {
   background-color: var(--verde-padrao);
-  color: #fff;
+  color: var(--branco); 
   font-size: 1.5rem;
   font-weight: bold;
   padding: 20px;
@@ -81,7 +89,7 @@
 }
 
 .event-details {
-  background-color: white;
+  background-color: var(--branco); 
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -97,8 +105,12 @@
 
 .event-details p {
   font-size: 1rem;
-  color: #666;
+  color: var(--texto);
 }
+
+/* ===================================== */
+/* MEDIA QUERIES (Manter)                */
+/* ===================================== */
 
 @media (max-width: 768px) {
   .timeline-container {
@@ -123,8 +135,12 @@
   }
 }
 
+/* ===================================== */
+/* PROPÓSITO                             */
+/* ===================================== */
+
 .propósito {
-  background-color: #f1f1f1;
+  background-color: var(--fundo-secundario, #f1f1f1); 
   padding: 40px 20px;
   text-align: center;
   margin-top: 40px;
@@ -139,28 +155,26 @@
 .propósito p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #444;
+  color: var(--texto); 
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 
-body.dark-mode .historia-intro {
-  color: #ddd;
-}
+/* ===================================== */
+/* ESTILOS ESPECÍFICOS DO DARK MODE      */
+/* ===================================== */
 
 body.dark-mode .historia-intro h1 {
   color: var(--verde-padrao);
 }
 
 body.dark-mode .historia-intro p {
-  color: #ccc;
+  color: var(--texto);
 }
 
-/* Timeline */
 body.dark-mode .timeline {
-  background-color: #1e1e1e;
-  color: #ddd;
+  background-color: var(--cinza-padrao);
 }
 
 body.dark-mode .timeline h2 {
@@ -172,8 +186,7 @@ body.dark-mode .timeline-container:before {
 }
 
 body.dark-mode .event-details {
-  background-color: #2a2a2a;
-  color: #ddd;
+  background-color: var(--cinza-padrao-claro, #2a2a2a); 
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -183,13 +196,11 @@ body.dark-mode .event-details h3 {
 }
 
 body.dark-mode .event-details p {
-  color: #ccc;
+  color: var(--texto);
 }
 
-/* Propósito */
 body.dark-mode .propósito {
-  background-color: #121212;
-  color: #ddd;
+  background-color: var(--fundo);
 }
 
 body.dark-mode .propósito h2 {
@@ -197,5 +208,5 @@ body.dark-mode .propósito h2 {
 }
 
 body.dark-mode .propósito p {
-  color: #ccc;
+  color: var(--texto);
 }

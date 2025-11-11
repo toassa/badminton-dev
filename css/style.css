@@ -8,15 +8,23 @@
   --texto: #333;
 }
 
+/* ===================================== */
+/* REGRAS DO MODO ESCURO (VARIÁVEIS)    */
+/* ===================================== */
+
 body.dark-mode {
-  --verde-padrao: #66B837;
-  --cinza-padrao: #222;
+  --verde-padrao: #66B837; /* Mantém o verde primário */
+  --cinza-padrao: #1e1e1e; /* Fundo de card/CTA secundário */
   --verde-claro: #a5d85e;
-  --preto: #fff;
-  --branco: #222;
+  --preto: #fff; /* Preto no modo escuro é branco */
+  --branco: #222; /* Branco no modo escuro é um cinza escuro */
   --fundo: #121212;
   --texto: #eee;
 }
+
+/* ===================================== */
+/* BASE E RESET                           */
+/* ===================================== */
 
 * {
   margin: 0;
@@ -28,7 +36,12 @@ body.dark-mode {
 body {
   background-color: var(--fundo);
   color: var(--texto);
+  transition: background-color 0.3s, color 0.3s;
 }
+
+/* ===================================== */
+/* HEADER E NAVEGAÇÃO                     */
+/* ===================================== */
 
 header {
   background: var(--verde-padrao);
@@ -53,7 +66,8 @@ header {
   transition: color 0.3s, transform 0.3s;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a:focus {
   color: var(--preto);
   transform: translateY(-3px);
 }
@@ -61,6 +75,10 @@ header {
 .navbar a.active {
   color: var(--preto);
 }
+
+/* ===================================== */
+/* BANNER (HOME)                          */
+/* ===================================== */
 
 .banner {
   /* background: url("https://www.fundesporte.ms.gov.br/wp-content/uploads/2023/07/DSC09075.jpg") center/cover no-repeat; */
@@ -105,10 +123,15 @@ header {
   transition: background 0.3s, transform 0.3s;
 }
 
-.banner .btn:hover {
+.banner .btn:hover,
+.banner .btn:focus { /* ADICIONADO :focus */
   background: var(--preto);
   transform: scale(1.05);
 }
+
+/* ===================================== */
+/* MAIN CONTENT                           */
+/* ===================================== */
 
 main {
   padding: 40px 20px;
@@ -116,6 +139,10 @@ main {
   margin: auto;
   min-height: 85vh;
 }
+
+/* ===================================== */
+/* INTRO (H2/P)                           */
+/* ===================================== */
 
 .cards-intro {
   text-align: center;
@@ -135,6 +162,10 @@ main {
   color: var(--texto);
   line-height: 1.6;
 }
+
+/* ===================================== */
+/* CARDS                        */
+/* ===================================== */
 
 .cards {
   display: grid;
@@ -185,10 +216,15 @@ main {
   transition: background 0.3s, transform 0.3s;
 }
 
-.card .btn:hover {
+.card .btn:hover,
+.card .btn:focus { /* ADICIONADO :focus */
   background: var(--preto);
   transform: scale(1.05);
 }
+
+/* ===================================== */
+/* CTA (Call to Action)                   */
+/* ===================================== */
 
 .cta {
   background: var(--verde-padrao);
@@ -220,10 +256,15 @@ main {
   transition: background 0.3s, transform 0.3s;
 }
 
-.cta .btn:hover {
+.cta .btn:hover,
+.cta .btn:focus {
   background: var(--preto);
   transform: scale(1.05);
 }
+
+/* ===================================== */
+/* FOOTER                                 */
+/* ===================================== */
 
 footer {
   background: var(--verde-padrao);
@@ -234,6 +275,9 @@ footer {
   font-size: 1rem;
 }
 
+/* ===================================== */
+/* BOTÃO DE ÍCONE (Dark Mode Toggle)      */
+/* ===================================== */
 
 .icon-btn {
   background: none;
@@ -247,36 +291,177 @@ footer {
   transition: transform 0.3s ease;
 }
 
-.icon-btn:hover {
+.icon-btn:hover,
+.icon-btn:focus {
   transform: scale(1.1);
 }
 
+/* ===================================== */
+/* REGRAS DO MODO ESCURO (SELETORES)      */
+/* ===================================== */
+
 body.dark-mode {
-  background-color: #121212;
-  color: #f5f5f5;
+  background-color: var(--fundo);
+  color: var(--texto);
 }
 
 body.dark-mode .card {
-  background: #1e1e1e; /* fundo escuro elegante */
-  color: var(--texto); /* usa o texto claro definido nas variáveis */
+  background: var(--cinza-padrao); 
+  color: var(--texto); 
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 body.dark-mode .card h2 {
-  color: var(--verde-claro); /* destaca o título com verde */
+  color: var(--verde-claro);
 }
 
 body.dark-mode .card p {
-  color: #ccc; /* texto levemente mais claro */
+  color: var(--texto);
 }
 
 body.dark-mode .card .btn {
   background: var(--verde-padrao);
+  color: var(--preto); 
+}
+
+body.dark-mode .card .btn:hover,
+body.dark-mode .card .btn:focus {
+  background: var(--verde-claro);
   color: var(--preto);
 }
 
-body.dark-mode .card .btn:hover {
-  background: var(--verde-claro);
-  color: var(--preto);
+body.dark-mode .cta {
+    background: var(--cinza-padrao); 
+    color: var(--texto); 
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .cta .btn {
+    background: var(--verde-padrao); 
+    color: var(--preto); 
+}
+
+body.dark-mode .cta .btn:hover,
+body.dark-mode .cta .btn:focus {
+    background: var(--verde-claro); 
+    color: var(--preto);
+}
+
+/* ===================================== */
+/* SUBMENU NAV (Institucional)           */
+/* ===================================== */
+
+.navbar .has-submenu {
+    position: relative; /* Essencial para posicionar o submenu em relação ao item pai */
+}
+
+/* Estilo do botão/link que abre o submenu */
+.navbar .has-submenu button {
+    /* Estilos para parecer um link normal da navbar */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar .has-submenu button:hover,
+.navbar .has-submenu button.active {
+    color: var(--preto);
+    transform: translateY(-3px);
+}
+
+/* Submenu (Oculto por padrão) */
+.submenu {
+    display: none; /* Oculta o submenu */
+    position: absolute;
+    top: 100%; /* Posiciona abaixo do botão */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1010;
+    min-width: 160px;
+    background-color: var(--verde-padrao); /* Fundo do menu suspenso */
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Transição de cores para Dark Mode */
+    transition: background-color 0.3s;
+}
+
+/* Item dentro do submenu */
+.submenu li {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+/* Link dentro do submenu */
+.submenu a {
+    display: block;
+    padding: 8px 15px;
+    color: var(--branco); /* Cor do texto no submenu */
+    font-weight: normal;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.submenu a:hover {
+    background-color: var(--verde-claro); /* Fundo ao passar o mouse */
+    color: var(--preto); /* Texto escuro ao passar o mouse */
+    transform: none; /* Remove o translateY dos links da navbar principal */
+}
+
+/* Mostra o submenu ao passar o mouse sobre o item pai */
+.navbar .has-submenu:hover > .submenu {
+    display: block;
+}
+
+/* ===================================== */
+/* SUBMENU DARK MODE                     */
+/* ===================================== */
+
+body.dark-mode .submenu {
+    background-color: var(--cinza-padrao); /* Fundo escuro */
+}
+
+body.dark-mode .submenu a {
+    color: var(--texto); /* Texto claro */
+}
+
+body.dark-mode .submenu a:hover {
+    background-color: var(--cinza-padrao-claro); 
+    color: var(--verde-claro); 
+}
+
+.submenu-font-size {
+    min-width: 140px; 
+}
+
+
+/* ===================================== */
+/* SUBMENU FONTE                         */
+/* ===================================== */
+
+body {
+    font-size: 1.2rem; 
+}
+
+body.font-small {
+    font-size: 1rem; 
+}
+
+body.font-large {
+    font-size: 1.6rem; 
+}
+
+.submenu a.font-active {
+    font-weight: bold;
+    background-color: var(--verde-claro); 
 }

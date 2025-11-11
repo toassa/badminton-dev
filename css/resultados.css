@@ -1,3 +1,7 @@
+/* ===================================== */
+/* RESULTADOS: INTRODUÇÃO E TEXTO        */
+/* ===================================== */
+
 .resultados-intro {
   text-align: center;
   margin-bottom: 40px;
@@ -12,12 +16,16 @@
 .resultados-intro p {
   font-size: 1.1rem;
   margin-bottom: 30px;
-  color: #444;
+  color: var(--texto); 
   line-height: 1.6;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ===================================== */
+/* RESULTADOS: CARDS DE DESTAQUE         */
+/* ===================================== */
 
 .resultados-cards {
   display: grid;
@@ -27,7 +35,7 @@
 }
 
 .card {
-  background-color: white;
+  background-color: var(--branco);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -53,11 +61,15 @@
 
 .card p {
   font-size: 1.1rem;
-  color: #555;
+  color: var(--texto); 
 }
 
+/* ===================================== */
+/* RESULTADOS: DESTAQUES INFERIORES      */
+/* ===================================== */
+
 .resultados-destaques {
-  background-color: #f1f1f1;
+  background-color: var(--fundo-secundario, #f1f1f1); 
   padding: 40px 20px;
   text-align: center;
   border-radius: 8px;
@@ -71,7 +83,7 @@
 }
 
 .highlight {
-  background-color: white;
+  background-color: var(--branco); 
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -80,36 +92,52 @@
 
 .highlight p {
   font-size: 1.1rem;
-  color: #444;
+  color: var(--texto);
   line-height: 1.6;
 }
 
+/* ===================================== */
+/* FOOTER*/
+/* ===================================== */
+
 footer {
   background-color: var(--verde-padrao);
-  color: white;
+  color: var(--branco);
   text-align: center;
   padding: 15px;
   margin-top: 40px;
 }
 
-body.dark-mode .resultados-intro p{
-  color: var(--texto);
+/* ===================================== */
+/* ESTILOS ESPECÍFICOS DO DARK MODE      */
+/* ===================================== */
+
+body.dark-mode .resultados-intro p {
+  color: var(--texto); /* Correto */
 }
 
-body.dark-mode .resultados-destaques{
-  background: #1e1e1e;
-  color: var(--texto);
+body.dark-mode .resultados-destaques {
+  background: var(--cinza-padrao); 
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-body.dark-mode .highlight{
-  background: #1e1e1e;
-  color: var(--texto);
+body.dark-mode .highlight {
+  background: var(--cinza-padrao);
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-body.dark-mode .highlight p{
-  color: var(--texto);
+body.dark-mode .highlight p {
+  color: var(--texto); 
+}
+
+body.dark-mode .card {
+    background-color: var(--cinza-padrao);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .card p {
+    color: var(--texto);
 }
