@@ -1,64 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resultados Competitivos - Associação</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/resultados.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados Competitivos - Associação</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/resultados.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 <body>
-  <header>
-    <nav>
-      <ul class="navbar">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="historia.html">História</a></li>
-        <li><a href="institucional.html">Institucional</a></li>
-        <li><a href="resultados.html" class="active">Resultados</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li>
-          <button id="toggle-dark" class="btn icon-btn">
-            <span id="icon-theme" class="material-symbols-outlined">dark_mode</span>
-          </button>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="historia.html">História</a></li>
+                <li><a href="institucional.html">Institucional</a></li>
+                <li><a href="resultados.html" class="active" aria-current="page">Resultados</a></li> 
+                <li><a href="contato.html">Contato</a></li>
+                <li>
+                    <button id="toggle-dark" class="btn icon-btn" aria-label="Alternar para tema escuro ou claro"> 
+                        <span id="icon-theme" class="material-symbols-outlined">dark_mode</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section class="resultados-intro">
-      <h1>Resultados Competitivos</h1>
-      <p>
-        A A.C.D.E ZN tem se destacado ao longo dos anos em várias competições e eventos, conquistando prêmios e reconhecimento pelo seu esforço e dedicação. Veja os resultados das nossas principais conquistas!
-      </p>
-    </section>
+    <main>
+        <section class="resultados-intro">
+            <h1>Resultados Competitivos</h1>
+            <p>A A.C.D.E ZN tem se destacado ao longo dos anos em várias competições e eventos, conquistando prêmios e reconhecimento pelo seu esforço e dedicação. Veja os resultados das nossas principais conquistas!</p>
+        </section>
 
-    <section class="resultados-cards">
-      <div class="card">
-        <h2>2021</h2>
-        <div class="icon">🏆</div>
-        <p>Cristiane 1º lugar no campeonato Brasileiro tanto na modalidade Simples/Dupla mista. (SH6)</p>
-        
-      </div>
-      <div class="card">
-        <h2>2022</h2>
-        <div class="icon">🏆</div>
-        <p>Cristiane 1º lugar no campeonato Brasileiro tanto na modalidade dupla feminina, Bi Campeã na Simples e na Dupla mista. (SH6)</p>
-      </div>
-    </section>
+        <section class="resultados-cards">
+            <div class="card">
+                <h2>2021</h2>
+                <div class="icon" aria-hidden="true">🏆</div>
+                <p>Cristiane 1º lugar no campeonato Brasileiro tanto na modalidade Simples/Dupla mista. (SH6)</p>
+            </div>
+            <div class="card">
+                <h2>2022</h2>
+                <div class="icon" aria-hidden="true">🏆</div>
+                <p>Cristiane 1º lugar no campeonato Brasileiro tanto na modalidade dupla feminina, Bi Campeã na Simples e na Dupla mista. (SH6)</p>
+            </div>
+        </section>
 
-    <section class="resultados-destaques">
-      <h2>Futuros Destaques</h2>
-      <div class="highlight">
-        <p><strong>Marina Nere Neves </strong> – Liderando o ranking dupla feminina SUB 13</p>
-      </div>
-      
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Associação - Todos os direitos reservados</p>
-  </footer>
-  <script src="./scripts/dark-mode.js"></script>
+        <section class="resultados-destaques">
+            <h2>Futuros Destaques</h2>
+            <div class="highlight">
+                <h3>Marina Nere Neves</h3> 
+                <p>Liderando o ranking dupla feminina SUB 13</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Associação - Todos os direitos reservados</p>
+    </footer>
+    <script src="./scripts/dark-mode.js"></script>
 </body>
 </html>

@@ -1,65 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato - Associação</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/contato.css">
-  <link rel="stylesheet" href="./css/resultados.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Associação</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contato.css">
+    <link rel="stylesheet" href="./css/resultados.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 <body>
-  <header>
-    <nav>
-      <ul class="navbar">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="historia.html">História</a></li>
-        <li><a href="institucional.html">Institucional</a></li>
-        <li><a href="resultados.html">Resultados</a></li>
-        <li><a href="contato.html" class="active">Contato</a></li>
-        <li>
-          <button id="toggle-dark" class="btn icon-btn">
-            <span id="icon-theme" class="material-symbols-outlined">dark_mode</span>
-          </button>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="historia.html">História</a></li>
+                <li><a href="institucional.html">Institucional</a></li>
+                <li><a href="resultados.html">Resultados</a></li>
+                <li><a href="contato.html" class="active" aria-current="page">Contato</a></li>
+                <li>
+                    <button id="toggle-dark" class="btn icon-btn" aria-label="Alternar para tema escuro ou claro">
+                        <span id="icon-theme" class="material-symbols-outlined">dark_mode</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section class="contato-intro">
-      <h1>Redes Sociais</h1>
-      <p>Conecte-se com a Associação e acompanhe nossas novidades pelas redes sociais:</p>
-    </section>
+    <main>
+        <section class="contato-intro">
+            <h1>Redes Sociais</h1>
+            <p>Conecte-se com a Associação e acompanhe nossas novidades pelas redes sociais:</p>
+        </section>
 
-    <section class="cards">
-      <div class="card">
-        <div class="icon">📘</div>
-        <h2>Facebook</h2>
-        <p><a href="https://www.facebook.com/suaassociacao" target="_blank">Visite nosso Facebook</a></p>
-      </div>
-      <div class="card">
-        <div class="icon">📸</div>
-        <h2>Instagram</h2>
-        <p><a href="https://www.instagram.com/suaassociacao" target="_blank">Nos acompanhe no Instagram</a></p>
-      </div>
-      <div class="card">
-        <div class="icon">🐦</div>
-        <h2>Twitter</h2>
-        <p><a href="https://twitter.com/suaassociacao" target="_blank">Siga-nos no Twitter</a></p>
-      </div>
-      <div class="card">
-        <div class="icon">💼</div>
-        <h2>LinkedIn</h2>
-        <p><a href="https://www.linkedin.com/company/suaassociacao" target="_blank">Confira nosso LinkedIn</a></p>
-      </div>
-    </section>
-  </main>
+        <section class="cards">
+            <div class="card">
+                <div class="icon" aria-hidden="true">📘</div>
+                <h2>Facebook</h2>
+                <p>
+                    <a href="https://www.facebook.com/suaassociacao" target="_blank" rel="noopener noreferrer" aria-label="Visite nosso Facebook (abre em nova aba)">Visite nosso Facebook</a>
+                </p>
+            </div>
+            <div class="card">
+                <div class="icon" aria-hidden="true">📸</div>
+                <h2>Instagram</h2>
+                <p>
+                    <a href="https://www.instagram.com/suaassociacao" target="_blank" rel="noopener noreferrer" aria-label="Nos acompanhe no Instagram (abre em nova aba)">Nos acompanhe no Instagram</a>
+                </p>
+            </div>
+            <div class="card">
+                <div class="icon" aria-hidden="true">🐦</div>
+                <h2>Twitter</h2>
+                <p>
+                    <a href="https://twitter.com/suaassociacao" target="_blank" rel="noopener noreferrer" aria-label="Siga-nos no Twitter (abre em nova aba)">Siga-nos no Twitter</a>
+                </p>
+            </div>
+            <div class="card">
+                <div class="icon" aria-hidden="true">💼</div>
+                <h2>LinkedIn</h2>
+                <p>
+                    <a href="https://www.linkedin.com/company/suaassociacao" target="_blank" rel="noopener noreferrer" aria-label="Confira nosso LinkedIn (abre em nova aba)">Confira nosso LinkedIn</a>
+                </p>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Associação - Todos os direitos reservados</p>
-  </footer>
-  <script src="./scripts/dark-mode.js"></script>  
+    <footer>
+        <p>&copy; 2025 Associação - Todos os direitos reservados</p>
+    </footer>
+    <script src="./scripts/dark-mode.js"></script> 
 </body>
 </html>

@@ -1,64 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Associados - Associação</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/institucional/associados.css">
-  <link rel="stylesheet" href="./css/resultados.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associados - Associação</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/institucional/associados.css">
+    <link rel="stylesheet" href="./css/resultados.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 <body>
-  <header>
-    <nav>
-      <ul class="navbar">
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="../institucional.html">Institucional</a></li>
-        <li><a href="associados.html" class="active">Associados</a></li>
-        <li><a href="mensalidades.html">Mensalidades</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../institucional.html">Institucional</a></li>
+                <li><a href="associados.html" class="active" aria-current="page">Associados</a></li>
+                <li><a href="mensalidades.html">Mensalidades</a></li>
+                <li>
+                    <button id="toggle-dark" class="btn icon-btn" aria-label="Alternar para tema escuro ou claro">
+                        <span id="icon-theme" class="material-symbols-outlined">dark_mode</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section class="associados-intro">
-      <h1>Associados</h1>
-      <p>Conheça os diferentes grupos de membros que fazem parte da nossa associação e colaboram para o nosso crescimento.</p>
-    </section>
+    <main>
+        <section class="associados-intro">
+            <h1>Associados</h1>
+            <p>Conheça os diferentes grupos de membros que fazem parte da nossa associação e colaboram para o nosso crescimento.</p>
+        </section>
 
-    <section class="cards">
-      <div class="card">
-        <div class="icon">🏛️</div>
-        <h2>Membros Fundadores</h2>
-        <p>Grupo responsável pela criação da associação e definição dos seus princípios.</p>
-      </div>
-      <div class="card">
-        <div class="icon">🧑‍🤝‍🧑</div>
-        <h2>Associados Ativos</h2>
-        <p>Pessoas que participam ativamente dos projetos, eventos e decisões da associação.</p>
-      </div>
-      <div class="card">
-        <div class="icon">🤝</div>
-        <h2>Colaboradores</h2>
-        <p>Parceiros que apoiam financeiramente ou com recursos os projetos em andamento.</p>
-      </div>
-    </section>
+        <section class="cards">
+            <div class="card">
+                <div class="icon" aria-hidden="true">🏛️</div>
+                <h2>Membros Fundadores</h2>
+                <p>Grupo responsável pela criação da associação e definição dos seus princípios.</p>
+            </div>
+            <div class="card">
+                <div class="icon" aria-hidden="true">🧑‍🤝‍🧑</div>
+                <h2>Associados Ativos</h2>
+                <p>Pessoas que participam ativamente dos projetos, eventos e decisões da associação.</p>
+            </div>
+            <div class="card">
+                <div class="icon" aria-hidden="true">🤝</div>
+                <h2>Colaboradores</h2>
+                <p>Parceiros que apoiam financeiramente ou com recursos os projetos em andamento.</p>
+            </div>
+        </section>
 
-    <section class="associados-destaques">
-      <h2>Benefícios e Informações</h2>
-      <div class="highlight">
-        <h3>Participação em Projetos</h3>
-        <p>Todos os associados têm acesso a participar ativamente dos projetos da associação.</p>
-      </div>
-      <div class="highlight">
-        <h3>Atualização de Dados</h3>
-        <p>Mantenha suas informações atualizadas para receber comunicados, boletins e convites para eventos.</p>
-      </div>
-    </section>
-  </main>
-  <script src="./scripts/dark-mode.js"></script>
-  <footer>
-    <p>&copy; 2025 Associação - Todos os direitos reservados</p>
-  </footer>
+        <section class="associados-destaques">
+            <h2>Benefícios e Informações</h2>
+            <div class="highlight">
+                <h3>Participação em Projetos</h3>
+                <p>Todos os associados têm acesso a participar ativamente dos projetos da associação.</p>
+            </div>
+            <div class="highlight">
+                <h3>Atualização de Dados</h3>
+                <p>Mantenha suas informações atualizadas para receber comunicados, boletins e convites para eventos.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="./scripts/dark-mode.js"></script>
+    <footer>
+        <p>&copy; 2025 Associação - Todos os direitos reservados</p>
+    </footer>
 </body>
 </html>
