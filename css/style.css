@@ -63,7 +63,8 @@ header {
 }
 
 .banner {
-  background: url("https://www.fundesporte.ms.gov.br/wp-content/uploads/2023/07/DSC09075.jpg") center/cover no-repeat;
+  /* background: url("https://www.fundesporte.ms.gov.br/wp-content/uploads/2023/07/DSC09075.jpg") center/cover no-repeat; */
+  background: url(../images/banner.png);
   color: white;
   text-align: center;
   padding: 120px 20px;
