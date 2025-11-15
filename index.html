@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/resultados.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <script>
+    (function() {
+        try {
+            const savedTheme = localStorage.getItem("theme") || "light";
+            if (savedTheme === "dark") {
+                document.documentElement.classList.add("dark-mode");
+            }
+            
+            const savedFontSize = localStorage.getItem('fontSize') || 'medium';
+            if (savedFontSize === 'small') {
+                document.documentElement.classList.add('font-small');
+            } else if (savedFontSize === 'large') {
+                document.documentElement.classList.add('font-large');
+            }
+        } catch (e) {
+            console.error('Erro ao aplicar preferências salvas:', e);
+        }
+    })();
+    </script>
 </head>
 <body>
     <header>
@@ -69,6 +88,7 @@
         </section>
 
         <section class="cards-intro">
+            <br>
             <h2>O que fazemos</h2>
             <p>Conheça nossas áreas de atuação e como impactamos positivamente a comunidade.</p>
         </section>
@@ -96,7 +116,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Associação - Todos os direitos reservados</p>
+        <p>&copy; 2025 A.C.D.E ZN - Todos os direitos reservados</p>
     </footer>
 
     <script src="./scripts/dark-mode.js"></script>

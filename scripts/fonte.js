@@ -5,10 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fontSubmenu = document.getElementById('submenu-font');
     const setFontSize = (size) => {
-        document.body.classList.remove('font-small', 'font-large');
+        // MUDEI AQUI: de document.body para document.documentElement
+        document.documentElement.classList.remove('font-small', 'font-large');
         
         if (size !== 'medium') {
-            document.body.classList.add(`font-${size}`);
+            // MUDEI AQUI: de document.body para document.documentElement
+            document.documentElement.classList.add(`font-${size}`);
         }
 
         if (fontSubmenu) {

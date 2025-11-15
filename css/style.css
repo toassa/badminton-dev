@@ -367,7 +367,7 @@ body.dark-mode .cta .btn:focus {
     text-decoration: none;
     font-weight: bold;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: inherit;
     padding: 0;
     transition: color 0.3s, transform 0.3s;
 }
@@ -450,15 +450,15 @@ body.dark-mode .submenu a:hover {
 /* ===================================== */
 
 body {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
 }
 
-body.font-small {
-    font-size: 1rem; 
+html.font-small {
+    font-size: 90%;
 }
 
-body.font-large {
-    font-size: 1.6rem; 
+html.font-large {
+    font-size: 110%;
 }
 
 .submenu a.font-active {
