@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Minimalista - Estética Dev (Interativa)</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/galeria.css">
+    <script>
+        (function () {
+            try {
+                // Lógica do Tema
+                const savedTheme = localStorage.getItem("theme") || "light";
+                if (savedTheme === "dark") {
+                    document.documentElement.classList.add("dark-mode");
+                }
+
+                // Lógica da Fonte
+                const savedFontSize = localStorage.getItem('fontSize') || 'medium';
+                if (savedFontSize === 'small') {
+                    document.documentElement.classList.add('font-small');
+                } else if (savedFontSize === 'large') {
+                    document.documentElement.classList.add('font-large');
+                }
+            } catch (e) {
+                console.error('Erro ao aplicar preferências salvas:', e);
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="historia.html">História</a></li>
+                <li class="has-submenu">
+                    <button aria-current="page" aria-expanded="false" aria-controls="submenu-institucional"
+                        aria-haspopup="true">
+                        Institucional
+                    </button>
+
+                    <ul id="submenu-institucional" class="submenu">
+                        <li><a href="institucional.html">Visão Geral</a></li>
+                        <li><a href="institucional/associados.html">Associados</a></li>
+                        <li><a href="institucional/mensalidades.html">Mensalidades</a></li>
+                    </ul>
+                </li>
+                <li><a href="resultados.html">Resultados</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li class="has-submenu">
+                    <button id="toggle-font-size" class="btn icon-btn" aria-label="Alterar Tamanho da Fonte"
+                        aria-haspopup="true" aria-expanded="false" aria-controls="submenu-font">
+                        <span class="material-symbols-outlined">format_size</span>
+                    </button>
+
+                    <ul id="submenu-font" class="submenu submenu-font-size">
+                        <li><a href="#" data-font-size="small">Pequeno</a></li>
+                        <li><a href="#" data-font-size="medium" class="font-active">Médio (Padrão)</a></li>
+                        <li><a href="#" data-font-size="large">Grande</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button id="toggle-dark" class="btn icon-btn" aria-label="Alternar para tema escuro ou claro">
+                        <span id="icon-theme" class="material-symbols-outlined">dark_mode</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="galeria-container" id="galeria-container">
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="fechar">&times;</span>
+        <div class="modal-conteudo">
+            <img id="modalImage" src="" alt="Imagem Expandida">
+            <p id="modalCaption" class="modal-legenda"></p>
+            <a id="downloadBtn" class="btn-download" download>
+                Baixar Imagem
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const galeriaItems = document.querySelectorAll('.item-galeria');
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const fecharBtn = document.querySelector('.fechar');
+
+            // Adiciona evento de clique a cada item da galeria
+            galeriaItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const img = item.querySelector('img');
+                    const legendaTitulo = item.querySelector('.legenda h3').textContent;
+                    const legendaDescricao = item.querySelector('.legenda p').textContent;
+
+                    // Pega o src da imagem de alta resolução (data-src) ou o src normal
+                    const imageUrl = img.getAttribute('data-src') || img.src; 
+                    
+                    // Atualiza o conteúdo do modal
+                    modalImage.src = imageUrl;
+                    modalCaption.textContent = `${legendaTitulo} - ${legendaDescricao}`;
+                    downloadBtn.href = imageUrl; // Define o link para download
+                    downloadBtn.download = `${legendaTitulo.replace(/\s/g, '_')}.jpg`; // Nome do arquivo para download
+
+                    modal.classList.add('ativo'); // Exibe o modal
+                    document.body.style.overflow = 'hidden'; // Evita scroll no body
+                });
+            });
+
+            // Fecha o modal ao clicar no botão 'x'
+            fecharBtn.addEventListener('click', () => {
+                modal.classList.remove('ativo');
+                document.body.style.overflow = ''; // Restaura scroll no body
+            });
+
+            // Fecha o modal ao clicar fora da imagem (no fundo escuro)
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.classList.remove('ativo');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Fecha o modal ao pressionar a tecla ESC
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && modal.classList.contains('ativo')) {
+                    modal.classList.remove('ativo');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+
+<footer>
+    <p>&copy; 2025 A.C.D.E ZN - Todos os direitos reservados</p>
+</footer>
+
+<script src="./scripts/dark-mode.js"></script>
+<script src="./scripts/fonte.js"></script>
+<script src="./scripts/galeria.js"></script>
+</body>
+</html>
