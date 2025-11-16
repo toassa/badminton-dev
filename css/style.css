@@ -13,11 +13,15 @@
 /* ===================================== */
 
 body.dark-mode {
-  --verde-padrao: #66B837; /* Mantém o verde primário */
-  --cinza-padrao: #1e1e1e; /* Fundo de card/CTA secundário */
+  --verde-padrao: #66B837;
+  /* Mantém o verde primário */
+  --cinza-padrao: #1e1e1e;
+  /* Fundo de card/CTA secundário */
   --verde-claro: #a5d85e;
-  --preto: #fff; /* Preto no modo escuro é branco */
-  --branco: #222; /* Branco no modo escuro é um cinza escuro */
+  --preto: #fff;
+  /* Preto no modo escuro é branco */
+  --branco: #222;
+  /* Branco no modo escuro é um cinza escuro */
   --fundo: #121212;
   --texto: #eee;
 }
@@ -49,7 +53,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -92,9 +96,11 @@ header {
 .banner::after {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.4);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
@@ -124,7 +130,8 @@ header {
 }
 
 .banner .btn:hover,
-.banner .btn:focus { /* ADICIONADO :focus */
+.banner .btn:focus {
+  /* ADICIONADO :focus */
   background: var(--preto);
   transform: scale(1.05);
 }
@@ -178,7 +185,7 @@ main {
   background: var(--branco);
   padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
   color: var(--texto);
@@ -186,7 +193,7 @@ main {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .card .icon {
@@ -217,7 +224,8 @@ main {
 }
 
 .card .btn:hover,
-.card .btn:focus { /* ADICIONADO :focus */
+.card .btn:focus {
+  /* ADICIONADO :focus */
   background: var(--preto);
   transform: scale(1.05);
 }
@@ -283,9 +291,9 @@ footer {
   background: none;
   border: none;
   cursor: pointer;
-  color: inherit;
   font-size: 24px;
   display: flex;
+  color: var(--branco);
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease;
@@ -306,8 +314,8 @@ body.dark-mode {
 }
 
 body.dark-mode .card {
-  background: var(--cinza-padrao); 
-  color: var(--texto); 
+  background: var(--cinza-padrao);
+  color: var(--texto);
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -322,7 +330,7 @@ body.dark-mode .card p {
 
 body.dark-mode .card .btn {
   background: var(--verde-padrao);
-  color: var(--preto); 
+  color: var(--preto);
 }
 
 body.dark-mode .card .btn:hover,
@@ -332,21 +340,21 @@ body.dark-mode .card .btn:focus {
 }
 
 body.dark-mode .cta {
-    background: var(--cinza-padrao); 
-    color: var(--texto); 
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--cinza-padrao);
+  color: var(--texto);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 body.dark-mode .cta .btn {
-    background: var(--verde-padrao); 
-    color: var(--preto); 
+  background: var(--verde-padrao);
+  color: var(--preto);
 }
 
 body.dark-mode .cta .btn:hover,
 body.dark-mode .cta .btn:focus {
-    background: var(--verde-claro); 
-    color: var(--preto);
+  background: var(--verde-claro);
+  color: var(--preto);
 }
 
 /* ===================================== */
@@ -354,73 +362,81 @@ body.dark-mode .cta .btn:focus {
 /* ===================================== */
 
 .navbar .has-submenu {
-    position: relative; /* Essencial para posicionar o submenu em relação ao item pai */
+  position: relative;
+  /* Essencial para posicionar o submenu em relação ao item pai */
 }
 
 /* Estilo do botão/link que abre o submenu */
 .navbar .has-submenu button {
-    /* Estilos para parecer um link normal da navbar */
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--branco);
-    text-decoration: none;
-    font-weight: bold;
-    font-family: inherit;
-    font-size: inherit;
-    padding: 0;
-    transition: color 0.3s, transform 0.3s;
+  /* Estilos para parecer um link normal da navbar */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .navbar .has-submenu button:hover,
 .navbar .has-submenu button.active {
-    color: var(--preto);
-    transform: translateY(-3px);
+  color: var(--preto);
+  transform: translateY(-3px);
 }
 
 /* Submenu (Oculto por padrão) */
 .submenu {
-    display: none; /* Oculta o submenu */
-    position: absolute;
-    top: 100%; /* Posiciona abaixo do botão */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1010;
-    min-width: 160px;
-    background-color: var(--verde-padrao); /* Fundo do menu suspenso */
-    list-style: none;
-    padding: 10px 0;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Transição de cores para Dark Mode */
-    transition: background-color 0.3s;
+  display: none;
+  /* Oculta o submenu */
+  position: absolute;
+  top: 100%;
+  /* Posiciona abaixo do botão */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1010;
+  min-width: 160px;
+  background-color: var(--verde-padrao);
+  /* Fundo do menu suspenso */
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Transição de cores para Dark Mode */
+  transition: background-color 0.3s;
 }
 
 /* Item dentro do submenu */
 .submenu li {
-    padding: 0;
-    margin: 0;
-    text-align: left;
+  padding: 0;
+  margin: 0;
+  text-align: left;
 }
 
 /* Link dentro do submenu */
 .submenu a {
-    display: block;
-    padding: 8px 15px;
-    color: var(--branco); /* Cor do texto no submenu */
-    font-weight: normal;
-    transition: background-color 0.3s, color 0.3s;
+  display: block;
+  padding: 8px 15px;
+  color: var(--branco);
+  /* Cor do texto no submenu */
+  font-weight: normal;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .submenu a:hover {
-    background-color: var(--verde-claro); /* Fundo ao passar o mouse */
-    color: var(--preto); /* Texto escuro ao passar o mouse */
-    transform: none; /* Remove o translateY dos links da navbar principal */
+  background-color: var(--verde-claro);
+  /* Fundo ao passar o mouse */
+  color: var(--preto);
+  /* Texto escuro ao passar o mouse */
+  transform: none;
+  /* Remove o translateY dos links da navbar principal */
 }
 
 /* Mostra o submenu ao passar o mouse sobre o item pai */
-.navbar .has-submenu:hover > .submenu {
-    display: block;
+.navbar .has-submenu:hover>.submenu {
+  display: block;
 }
 
 /* ===================================== */
@@ -428,20 +444,22 @@ body.dark-mode .cta .btn:focus {
 /* ===================================== */
 
 body.dark-mode .submenu {
-    background-color: var(--cinza-padrao); /* Fundo escuro */
+  background-color: var(--cinza-padrao);
+  /* Fundo escuro */
 }
 
 body.dark-mode .submenu a {
-    color: var(--texto); /* Texto claro */
+  color: var(--texto);
+  /* Texto claro */
 }
 
 body.dark-mode .submenu a:hover {
-    background-color: var(--cinza-padrao-claro); 
-    color: var(--verde-claro); 
+  background-color: var(--cinza-padrao-claro);
+  color: var(--verde-claro);
 }
 
 .submenu-font-size {
-    min-width: 140px; 
+  min-width: 140px;
 }
 
 
@@ -450,18 +468,87 @@ body.dark-mode .submenu a:hover {
 /* ===================================== */
 
 body {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 html.font-small {
-    font-size: 90%;
+  font-size: 90%;
 }
 
 html.font-large {
-    font-size: 110%;
+  font-size: 110%;
 }
 
 .submenu a.font-active {
-    font-weight: bold;
-    background-color: var(--verde-claro); 
+  font-weight: bold;
+  background-color: var(--verde-claro);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--branco);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 280px;
+    background-color: var(--cinza-padrao);
+    padding: 60px 0 20px 0;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 900;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    z-index: 1100;
+  }
+
+  .navbar.open {
+    transform: translateX(0);
+  }
+
+  .navbar li {
+    width: 100%;
+    text-align: left;
+    padding: 10px 25px;
+  }
+
+  .navbar .has-submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .submenu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    background-color: #0000001a;
+    width: 100%;
+  }
+
+  .navbar .icon-btn {
+    padding: 5px;
+  }
+
+  body.dark-mode .navbar a,
+  body.dark-mode .navbar .has-submenu button:not(.icon-btn),
+  body.dark-mode .navbar .icon-btn,
+  body.dark-mode .hamburger {
+    color: var(--texto);
+  }
 }

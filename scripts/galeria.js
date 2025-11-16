@@ -1,8 +1,3 @@
-// ###############################################################
-        // # 1. LISTA DE IMAGENS: Você edita APENAS esta lista!          #
-        // # O script assume que a imagem miniatura é `images/nome-min.jpg`
-        // # e a imagem de alta resolução é `images/nome-max.jpg`.
-        // ###############################################################
         const imageFiles = [
             {
                 nome: "FotoComPlaca", 
@@ -27,35 +22,18 @@
             {
                 nome:"CobExpo",
                 titulo: "Cob EXPO",
-                descricao: ""
+                descricao: "Nosso fundador, Fabio, representando a associação na COB EXPO 2025!"
             },
             {
                 nome:"pascoaHavana",
-                titulo: "Patrocinio HAVANA",
-                descricao: ""
+                titulo: "Patrocínio HAVANA",
+                descricao: "Um dia de muito esporte e celebração! Agradecemos de coração ao nosso patrocinador, HAVANA, por acreditar no nosso projeto e apoiar nossos atletas."
             },
             {
                 nome:"sescSantana",
-                titulo: "Vivencia Sesc Santana",
+                titulo: "Vivência Sesc Santana",
                 descricao: "Dia de levar o Parabadminton aos alunos da Diretoria de Ensino Norte 2"
             },
-            {
-                nome:"",
-                titulo: "",
-                descricao: ""
-            },
-            {
-                nome:"",
-                titulo: "",
-                descricao: ""
-            },
-            {
-                nome:"",
-                titulo: "",
-                descricao: ""
-            },
-            // Adicione mais objetos para cada par de fotos que você tiver
-            // { nome: "foto5", titulo: "...", descricao: "..." },
         ];
         
         document.addEventListener('DOMContentLoaded', () => {

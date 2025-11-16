@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Associação</title>
+    <title>Contato - A.C.D.E ZN</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/contato.css">
     <link rel="stylesheet" href="./css/resultados.css">
@@ -12,13 +12,10 @@
     <script>
         (function () {
             try {
-                // Lógica do Tema
                 const savedTheme = localStorage.getItem("theme") || "light";
                 if (savedTheme === "dark") {
                     document.documentElement.classList.add("dark-mode");
                 }
-
-                // Lógica da Fonte
                 const savedFontSize = localStorage.getItem('fontSize') || 'medium';
                 if (savedFontSize === 'small') {
                     document.documentElement.classList.add('font-small');
@@ -35,7 +32,9 @@
 <body>
     <header>
         <nav>
-            <ul class="navbar">
+            <button id="hamburger-btn" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navbar-menu"> &#9776; </button>
+
+<ul id="navbar-menu" class="navbar">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="historia.html">História</a></li>
                 <li class="has-submenu">
@@ -51,6 +50,7 @@
                     </ul>
                 </li>
                 <li><a href="resultados.html">Resultados</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="contato.html">Contato</a></li>
                 <li class="has-submenu">
                     <button id="toggle-font-size" class="btn icon-btn" aria-label="Alterar Tamanho da Fonte"
@@ -113,6 +113,8 @@
 
     <script src="./scripts/dark-mode.js"></script>
     <script src="./scripts/fonte.js"></script>
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/menu.js"></script>
 </body>
 
 </html>

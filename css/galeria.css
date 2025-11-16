@@ -1,181 +1,191 @@
+:root {
+    --cor-fundo: #1E1E1E;
+    --cor-texto: #F0F0F0;
+    --cor-detalhe: #4CAF50;
+    --espacamento-padrao: 1rem;
+}
 
-        /* Estilos Base e Reset */
-        :root {
-            /* Cores de uma estética dev comum (terminal, código, minimalismo) */
-            --cor-fundo: #1E1E1E; /* Cinza escuro, quase preto (dark mode) */
-            --cor-texto: #F0F0F0; /* Branco suave */
-            --cor-detalhe: #4CAF50; /* Um verde sutil para destaque (como em código) */
-            --espacamento-padrao: 1rem;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--cor-fundo);
-            color: var(--cor-texto);
-            line-height: 1.6;
-        }
 
-        
 
-        /* Contêiner da Galeria (Usando CSS Grid) */
-        .galeria-container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            
-            /* CSS Grid para o layout responsivo */
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem; /* Espaço entre as fotos */
-            padding-bottom: 4rem;
-        }
+.galeria-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding-bottom: 4rem;
+}
 
-        /* Item da Galeria (Cada Foto) */
-        .item-galeria {
-            background-color: #2D2D2D; /* Fundo mais claro que o body, para profundidade */
-            border-radius: 8px;
-            overflow: hidden; /* Garante que a imagem se ajuste ao border-radius */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra sutil */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer; /* Indica que é clicável */
-        }
+.item-galeria {
+    background-color: #2D2D2D;
+    /* Fundo mais claro que o body, para profundidade */
+    border-radius: 8px;
+    overflow: hidden;
+    /* Garante que a imagem se ajuste ao border-radius */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    /* Indica que é clicável */
+}
 
-        .item-galeria:hover {
-            transform: translateY(-5px); /* Efeito de elevação sutil */
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
-        }
+.item-galeria:hover {
+    transform: translateY(-5px);
+    /* Efeito de elevação sutil */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
 
-        /* Imagem */
-        .item-galeria img {
-            width: 100%;
-            height: 250px; /* Altura fixa para manter a grade uniforme */
-            object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
-            display: block;
-            transition: opacity 0.3s ease;
-        }
+/* Imagem */
+.item-galeria img {
+    width: 100%;
+    height: 250px;
+    /* Altura fixa para manter a grade uniforme */
+    object-fit: cover;
+    /* Garante que a imagem cubra a área sem distorção */
+    display: block;
+    transition: opacity 0.3s ease;
+}
 
-        .item-galeria:hover img {
-            opacity: 0.9;
-        }
+.item-galeria:hover img {
+    opacity: 0.9;
+}
 
-        /* Legenda da Imagem */
-        .legenda {
-            padding: var(--espacamento-padrao);
-            text-align: center;
-        }
+/* Legenda da Imagem */
+.legenda {
+    padding: var(--espacamento-padrao);
+    text-align: center;
+}
 
-        .legenda h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-        }
+.legenda h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
 
-        .legenda p {
-            font-size: 0.9rem;
-            opacity: 0.6;
-        }
+.legenda p {
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
 
-        /* --- Estilos do Modal (Pop-up) --- */
-        .modal {
-            display: none; /* Escondido por padrão */
-            position: fixed; /* Fixado na tela */
-            z-index: 1000; /* Acima de tudo */
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto; /* Permite scroll se a imagem for muito grande */
-            background-color: rgba(0, 0, 0, 0.9); /* Fundo preto semi-transparente */
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 20px;
-        }
+/* --- Estilos do Modal (Pop-up) --- */
+.modal {
+    display: none;
+    /* Escondido por padrão */
+    position: fixed;
+    /* Fixado na tela */
+    z-index: 1000;
+    /* Acima de tudo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Permite scroll se a imagem for muito grande */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fundo preto semi-transparente */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
 
-        .modal.ativo {
-            display: flex; /* Exibe o modal quando ativo */
-        }
+.modal.ativo {
+    display: flex;
+    /* Exibe o modal quando ativo */
+}
 
-        .modal-conteudo {
-            position: relative;
-            background-color: #2D2D2D;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
-            max-width: 90%;
-            max-height: 90%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
+.modal-conteudo {
+    position: relative;
+    background-color: #2D2D2D;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
 
-        .modal-conteudo img {
-            max-width: 100%;
-            max-height: 70vh; /* Altura máxima da imagem no modal */
-            object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
-            border-radius: 4px;
-        }
+.modal-conteudo img {
+    max-width: 100%;
+    max-height: 70vh;
+    /* Altura máxima da imagem no modal */
+    object-fit: contain;
+    /* Garante que a imagem se ajuste sem cortar */
+    border-radius: 4px;
+}
 
-        .modal-legenda {
-            color: var(--cor-texto);
-            font-size: 1.2rem;
-            text-align: center;
-        }
+.modal-legenda {
+    color: var(--cor-texto);
+    font-size: 1.2rem;
+    text-align: center;
+}
 
-        .fechar {
-            position: absolute;
-            top: 15px;
-            right: 25px;
-            color: #aaa;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
+.fechar {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #aaa;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
 
-        .fechar:hover,
-        .fechar:focus {
-            color: var(--cor-detalhe);
-            text-decoration: none;
-            cursor: pointer;
-        }
+.fechar:hover,
+.fechar:focus {
+    color: var(--cor-detalhe);
+    text-decoration: none;
+    cursor: pointer;
+}
 
-        .btn-download {
-            background-color: var(--cor-detalhe);
-            color: var(--cor-fundo); /* Texto escuro no botão verde */
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            text-decoration: none; /* Para parecer um link/botão */
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            display: inline-flex; /* Para alinhar ícone e texto se tiver */
-            align-items: center;
-            gap: 5px;
-        }
+.btn-download {
+    background-color: var(--cor-detalhe);
+    color: var(--cor-fundo);
+    /* Texto escuro no botão verde */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    /* Para parecer um link/botão */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    /* Para alinhar ícone e texto se tiver */
+    align-items: center;
+    gap: 5px;
+}
 
-        .btn-download:hover {
-            background-color: #388E3C; /* Um verde um pouco mais escuro no hover */
-            transform: translateY(-2px);
-        }
+.btn-download:hover {
+    background-color: #388E3C;
+    /* Um verde um pouco mais escuro no hover */
+    transform: translateY(-2px);
+}
 
-        /* Responsividade para o modal em telas menores */
-        @media (max-width: 768px) {
-            .modal-conteudo {
-                padding: 15px;
-            }
-            .fechar {
-                font-size: 30px;
-                top: 10px;
-                right: 15px;
-            }
-        }
+/* Responsividade para o modal em telas menores */
+@media (max-width: 768px) {
+    .modal-conteudo {
+        padding: 15px;
+    }
 
-    
+    .fechar {
+        font-size: 30px;
+        top: 10px;
+        right: 15px;
+    }
+}
