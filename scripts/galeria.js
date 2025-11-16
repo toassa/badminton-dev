@@ -24,6 +24,36 @@
                 titulo: "Primeiro festival", 
                 descricao: "Primeiro festival do badminton ZN."
             },
+            {
+                nome:"CobExpo",
+                titulo: "Cob EXPO",
+                descricao: ""
+            },
+            {
+                nome:"pascoaHavana",
+                titulo: "Patrocinio HAVANA",
+                descricao: ""
+            },
+            {
+                nome:"sescSantana",
+                titulo: "Vivencia Sesc Santana",
+                descricao: "Dia de levar o Parabadminton aos alunos da Diretoria de Ensino Norte 2"
+            },
+            {
+                nome:"",
+                titulo: "",
+                descricao: ""
+            },
+            {
+                nome:"",
+                titulo: "",
+                descricao: ""
+            },
+            {
+                nome:"",
+                titulo: "",
+                descricao: ""
+            },
             // Adicione mais objetos para cada par de fotos que você tiver
             // { nome: "foto5", titulo: "...", descricao: "..." },
         ];
