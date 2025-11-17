@@ -1,7 +1,3 @@
-/* ===================================== */
-/* INTRODUÇÃO DE CONTATO                 */
-/* ===================================== */
-
 .contato-intro {
   text-align: center;
   margin: 40px 20px;
@@ -20,10 +16,6 @@
   color: var(--texto);
   line-height: 1.6;
 }
-
-/* ===================================== */
-/* CARDS DE REDES SOCIAIS                */
-/* ===================================== */
 
 .cards {
   display: grid;
@@ -67,10 +59,6 @@
 .card a:hover {
   color: var(--verde-padrao);
 }
-
-/* ===================================== */
-/* ESTILOS ESPECÍFICOS DO DARK MODE      */
-/* ===================================== */
 
 body.dark-mode .card {
     background: var(--cinza-padrao); 

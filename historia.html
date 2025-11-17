@@ -13,13 +13,11 @@
     <script>
         (function () {
             try {
-                // Lógica do Tema
                 const savedTheme = localStorage.getItem("theme") || "light";
                 if (savedTheme === "dark") {
                     document.documentElement.classList.add("dark-mode");
                 }
 
-                // Lógica da Fonte
                 const savedFontSize = localStorage.getItem('fontSize') || 'medium';
                 if (savedFontSize === 'small') {
                     document.documentElement.classList.add('font-small');
@@ -36,9 +34,10 @@
 <body>
     <header>
         <nav>
-            <button id="hamburger-btn" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navbar-menu"> &#9776; </button>
+            <button id="hamburger-btn" class="hamburger" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="navbar-menu"> &#9776; </button>
 
-<ul id="navbar-menu" class="navbar">
+            <ul id="navbar-menu" class="navbar">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="historia.html">História</a></li>
                 <li class="has-submenu">
@@ -81,47 +80,49 @@
         <section class="historia-intro">
             <h1>Nossa História</h1>
             <p>
-                A Associação Cultural, Desportiva e Educacional Zona Norte (A.C.D.E ZN) foi fundada em 1998 por um grupo
-                de pessoas comprometidas com o fortalecimento da comunidade local. Desde então, trabalhamos com projetos
-                sociais, culturais e educativos, sempre buscando promover a integração e o desenvolvimento de todos os
-                membros da comunidade.
+                A história da A.C.D.E ZN começa com um sonho: o de levar o badminton e o parabádminton para a Zona Norte
+                de São Paulo. O que começou em 2020 como uma semente plantada pelo fundador Fabio, hoje se tornou uma
+                associação consolidada com mais de 80 alunos.
             </p>
             <p>
-                Ao longo dos anos, conquistamos importantes resultados e ampliamos nossa rede de associados, parceiros e
-                colaboradores. Acreditamos que o esporte, a arte e a educação são ferramentas essenciais para a
+                Nossa jornada, detalhada na linha do tempo abaixo, é marcada por superação, títulos importantes e um
+                crescimento constante. Acreditamos que o esporte, a arte e a educação são ferramentas essenciais para a
                 transformação social.
             </p>
         </section>
 
         <section class="timeline">
-            <h2>Marco da Nossa Jornada</h2>
+            <h2>Marcos da Nossa Jornada</h2>
             <div class="timeline-container">
                 <div class="timeline-event left">
                     <div class="year">12/12/2020</div>
                     <div class="event-details">
                         <h3>O plantar de uma semente</h3>
-                        <p>Ao participar de um camping para treinadores pela confederação brasileira de badminton em
-                            americana, Fabio postou em seu instagram uma foto ao lado de um banner.
-                            Com isso Eduardo o enviou mensagem pedindo para ter aulas com ele, porem Fabio não tinha um
-                            local para dar aulas ainda....
+                        <p>Ao participar de um camping para treinadores pela Confederação Brasileira de Badminton em
+                            Americana, Fabio postou em seu Instagram uma foto ao lado de um banner.
+                            Com isso, Eduardo lhe enviou mensagem pedindo para ter aulas com ele, porém Fabio não tinha
+                            um
+                            local para dar aulas ainda...
                         </p>
                     </div>
                 </div>
                 <div class="timeline-event right">
                     <div class="year">2021</div>
                     <div class="event-details">
-                        <h3>A procura por um lar</h3>
-                        <p>Ao analisar as opçoes de locais,fabio se deparou com o clube Palmeirinha do Carandiru, porem
-                            estava acima do orçamento que Fabio, porem com a dica de um colega , Fabio fez uma proposta
-                            de arrendamento e foi aceita.....</p>
+                        <h3>À procura por um lar</h3>
+                        <p>Ao analisar as opções de locais, Fabio se deparou com o clube Palmeirinha do Carandiru, porém
+                            estava acima do orçamento de Fabio. Porém, com a dica de um colega, Fabio fez uma proposta
+                            de arrendamento e foi aceita.
+                        </p>
                     </div>
                 </div>
                 <div class="timeline-event left">
                     <div class="year">08/02/2021</div>
                     <div class="event-details">
-                        <h3>o inicio de um sonho</h3>
-                        <p>Começamos com uma aula inaugural, onde mesmo com apenas 6 alunos pagantes, contamos com
-                            aproximadamente 12 pessoas prestigiando o evento</p>
+                        <h3>O início de um sonho</h3>
+                        <p>Começamos com uma aula inaugural, onde, mesmo com apenas 6 alunos pagantes, contamos com
+                            aproximadamente 12 pessoas prestigiando o evento.
+                        </p>
                     </div>
                 </div>
                 <div class="timeline-event right">
@@ -129,10 +130,10 @@
                     <div class="event-details">
                         <h3>O evoluir de uma estrela</h3>
                         <p>Por volta de agosto, a Cristiane e seu marido Leo foram nos conhecer, por indicação de um
-                            outro para-atleta, o Márcio Della Fina, que tambem tem nanismo.
-                            Com o fluir dos treinos , por volta de setembro a Cristiane manisfestou interesse em
-                            competir, com isso nos increvemos no Campeonato brasileiro de parabminton (tivemos que
-                            increve-la por outra equipe de uma conhhecida do Fabio) e fomos....
+                            outro para-atleta, o Márcio Della Fina, que também tem nanismo.
+                            Com o fluir dos treinos, por volta de setembro a Cristiane manifestou interesse em
+                            competir. Com isso, nos inscrevemos no Campeonato Brasileiro de Parabadminton (tivemos que
+                            inscrevê-la por outra equipe de uma conhecida do Fabio) e fomos...
                         </p>
                     </div>
                 </div>
@@ -140,54 +141,59 @@
                     <div class="year">12/2021</div>
                     <div class="event-details">
                         <h3>A grande virada</h3>
-                        <p>Chegamos no evento com a espectativa baixa e saimos de lá campeoes brasileiros tanto na
-                            modalidade Simples quanto Dupla mista. Com este titulo, Fabio pode participar como Professor
-                            do Programa de Capacitação Paralimpico do Estado de São Paulo</p>
+                        <p>Chegamos ao evento com a expectativa baixa e saímos de lá campeões brasileiros tanto na
+                            modalidade Simples quanto na Dupla mista. Com este título, Fabio pôde participar como
+                            Professor
+                            do Programa de Capacitação Paralímpico do Estado de São Paulo.
+                        </p>
                     </div>
                 </div>
                 <div class="timeline-event right">
                     <div class="year">2022</div>
                     <div class="event-details">
                         <h3>A consolidação de uma era</h3>
-                        <p>Treinada por Fabio, Cristiane foi campeã Brasileira na dupla, Bi Campeã na Simples e na Dupla
-                            mista, e com isso Fabio rompeu barreira e passou a ser chamado para ministrar cursos em
-                            diversas cidades</p>
+                        <p>Treinada por Fabio, Cristiane foi campeã brasileira na dupla, bicampeã na Simples e na Dupla
+                            mista e, com isso, Fabio rompeu barreiras e passou a ser chamado para ministrar cursos em
+                            diversas cidades.
+                        </p>
                     </div>
                 </div>
                 <div class="timeline-event left">
-                    <div class="year">2022</div>
                     <div class="event-details">
-                        <h3>De aluno a Professor</h3>
-                        <p>Com seu destaque ao ministrar curso , Fabio foi chamado para proporcionar vivencias em
-                            unidade dos SESC em toda SP, proporcionando cada vez mais visibilidade</p>
+                        <h3>De aluno a professor</h3>
+                        <p>Com seu destaque ao ministrar cursos, Fabio foi chamado para proporcionar vivências em
+                            unidades do SESC em toda SP, proporcionando cada vez mais visibilidade.
+                        </p>
                     </div>
                 </div>
                 <div class="timeline-event right">
                     <div class="year">09/2023</div>
                     <div class="event-details">
                         <h3>A expansão</h3>
-                        <p>Apos o convite de dar aulas experimentais na assosiação Okinawa cachoeirinha, ambas as partes
-                            entraram em um acordo e assim surge a unidade do Badminton ZN Villa Nova Cachoeirinha</p>
+                        <p>Após o convite de dar aulas experimentais na associação Okinawa Cachoeirinha, ambas as partes
+                            entraram em um acordo e assim surge a unidade do Badminton ZN Villa Nova Cachoeirinha.
+                        </p>
                     </div>
                 </div>
                 <div class="timeline-event left">
                     <div class="year">Atualmente</div>
                     <div class="event-details">
                         <h3>Uma empresa consolidada</h3>
-                        <p>Hoje em dia o Badminton ZN conta com mais de 80 alunos, conta com bolsas parciais , alem de
-                            Fabio, contamos com o professor Thiago Vinícius (com todas as certificaçoes nescessárias)
+                        <p>Hoje em dia o Badminton ZN conta com mais de 80 alunos, conta com bolsas parciais e, além de
+                            Fabio, contamos com o professor Thiago Vinícius (com todas as certificações necessárias).
                         </p>
                     </div>
                 </div>
             </div>
-            <h2>A criação da Associação em sí</h2>
+            <h2>A criação da Associação em si</h2>
             <div class="timeline-container">
                 <div class="timeline-event right">
                     <div class="year">2025</div>
                     <div class="event-details">
                         <h3>Uma ideia</h3>
-                        <p>Com o passar dos tempos Fabio entendeu que para poder promover mais açoes socias , seria
-                            nescessário encontrar patrocinio, Surgindo assim a ACDE ZN</p>
+                        <p>Com o passar do tempo, Fabio entendeu que para poder promover mais ações sociais, seria
+                            necessário encontrar patrocínio. Surgindo assim a ACDE ZN.
+                        </p>
                     </div>
                 </div>
                 <div class="timeline-event left">
@@ -202,7 +208,7 @@
         <section class="propósito">
             <h2>Nosso Propósito</h2>
             <p>
-                ​A Associação Cultural, Desportiva e Educacional ZN (A.C.D.E. ZN) é uma entidade da sociedade civil,
+                A Associação Cultural, Desportiva e Educacional ZN (A.C.D.E. ZN) é uma entidade da sociedade civil,
                 sem fins econômicos, dedicada à promoção integral do ser humano por meio do tripé Cultura, Esporte e
                 Educação.
             </p>
